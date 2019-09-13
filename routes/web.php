@@ -13,4 +13,10 @@
 
 Route::get('/', function () {
     return view('welcome');
-});
+});  
+
+
+//Route::resource('persona', 'PersonaController');
+Route::get('/persona', 'PersonaController@index');
+Route::post('/persona', 'PersonaController@store');
+Route::get('/persona/create', 'PersonaController@create');
